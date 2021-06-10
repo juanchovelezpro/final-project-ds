@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-redis
+  labels:
+    app: appredis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appredis
+  template:
+    metadata:
+      labels:
+        app: appredis
+    spec:
+      containers:
+      - name: app-redis
+        image: redis:alphine
