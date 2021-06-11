@@ -5,7 +5,7 @@ metadata:
   labels:
     app: appredis
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: appredis
@@ -15,5 +15,5 @@ spec:
         app: appredis
     spec:
       containers:
-      - name: app-redis
-        image: redis:alphine
+      - name: redis
+        image: redis:alpine
